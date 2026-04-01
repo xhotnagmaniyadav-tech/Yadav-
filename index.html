@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nagmani Ultimate Portfolio</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: url('https://images.unsplash.com/photo-1492724441997-5dc865305da7') no-repeat center/cover;
+}
+
+/* Blur background */
+.overlay {
+    backdrop-filter: blur(10px);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Laptop */
+.laptop {
+    width: 95%;
+    max-width: 900px;
+    background: rgba(0,0,0,0.7);
+    border-radius: 20px;
+    padding: 15px;
+    box-shadow: 0 0 60px cyan;
+}
+
+/* Screen */
+.screen {
+    padding: 25px;
+    text-align: center;
+    color: white;
+}
+
+/* Glow animation */
+@keyframes glowColor {
+    0% {color: cyan;}
+    25% {color: yellow;}
+    50% {color: pink;}
+    75% {color: lime;}
+    100% {color: cyan;}
+}
+
+.glow {
+    animation: glowColor 4s infinite;
+    text-shadow: 0 0 10px currentColor, 0 0 20px currentColor;
+}
+
+/* Profile */
+.profile img {
+    width: 130px;
+    border-radius: 50%;
+    border: 3px solid cyan;
+    box-shadow: 0 0 30px cyan;
+}
+
+/* Typing */
+#typing {
+    font-size: 18px;
+    height: 25px;
+}
+
+/* Sections */
+.section {
+    margin-top: 15px;
+    padding: 12px;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.05);
+    transition: 0.3s;
+}
+
+.section:hover {
+    transform: scale(1.08);
+    background: rgba(0,255,255,0.2);
+}
+
+/* Buttons */
+.btn {
+    display: block;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    background: black;
+    border: 1px solid cyan;
+}
+
+.btn:hover {
+    background: cyan;
+    color: black;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="overlay">
+<div class="laptop">
+<div class="screen">
+
+<div class="profile">
+    <img src="nagmani.jpg">
+    <h1 class="glow">Developer Nagmani-Yadav</h1>
+    <div id="typing" class="glow"></div>
+</div>
+
+<div class="section glow">💻 Full Professional Web Developer</div>
+
+<div class="section glow">
+⚡ Skills: JS, Python, MS Office, Tally, CorelDRAW, Adobe Illustrator, Premiere Pro, Photoshop
+</div>
+
+<div class="section glow">
+📁 Projects: Portfolio, AI Tools, Graphics Design
+</div>
+
+<div class="section glow">
+📞 Contact Me
+<br><br>
+
+<a class="btn" href="tel:9204909834">📞 Call Now</a>
+<a class="btn" href="https://wa.me/919204909834" target="_blank">💬 WhatsApp</a>
+<a class="btn" href="mailto:xhotnagmaniyadav@gmail.com">📧 Gmail</a>
+
+</div>
+
+</div>
+</div>
+</div>
+
+<script>
+let text = "React Js | Tailwind CSS | Frontend | Designer | Developer";
+let i = 0;
+
+function typeEffect() {
+    if (i < text.length) {
+        document.getElementById("typing").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeEffect, 50);
+    }
+}
+
+typeEffect();
+</script>
+
+</body>
+</html>
